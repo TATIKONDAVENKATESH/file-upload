@@ -13,7 +13,7 @@ index.use((req:IncomingMessage, res:ServerResponse, next) => {
     if (req.method === 'OPTIONS') {
         res.setHeader("Acess-Contron-Allow-Methods", "PUT, POST, PATCH, DELETE, GET");
         res.statusCode = 200;
-        return res.statusCode.json({});
+    //    return res.statusCode.json({});
     }
     next();
 });
