@@ -29,19 +29,21 @@ export default function Home() {
   return (
     <>
       <h1>Choose a File/Image</h1>
-        <form onSubmit={onSubmit}>
-          <input
-            type="file"
-            name="file"
-            onChange={(e) => setFile(e.target.files?.[0])}
-          />
-          <Button 
-            type="submit"
-            title="Submit"
-            icon=""
-            variant="btn_green"
-          />
-        </form>
+      <form onSubmit={onSubmit} encType="multipart/form-data">
+      <input
+        type="file"
+        name="file"
+        onChange={(e) => setFile(e.target.files?.[0])}
+      />
+      <Button 
+        type="submit"
+        title="submit"
+        icon=""
+        variant="btn_green"
+      />
+        <button type="submit">Upload</button>
+      </form>
+
       <Recent />
     </>
   );
